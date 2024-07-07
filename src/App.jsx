@@ -39,6 +39,7 @@ function App() {
           <Plus className="h-4 w-4" />
         </button>
       </div>
+      <h2 className="font-bold text-3xl pt-3">All Products</h2>
       <div className="flex">
         <ProductList addToCart={addToCart} />
         <Cart cartItems={cartItems} />

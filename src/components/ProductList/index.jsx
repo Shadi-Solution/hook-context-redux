@@ -6,7 +6,7 @@ import PRODUCTS from "./data";
 const ProductList = ({ addToCart }) => {
   console.log("Im ProductList component");
   return (
-    <div className="mx-auto grid w-full max-w-7xl items-center space-y-4 px-2 py-10 md:grid-cols-2 md:gap-6 md:space-y-0 lg:grid-cols-4">
+    <div className="mx-auto grid w-full max-w-7xl items-center space-y-4 px-2 py-5 md:grid-cols-2 md:gap-6 md:space-y-0 lg:grid-cols-4">
       {PRODUCTS.map(({ key, name, price, description, imgUrl }) => (
         <div key={key} className="rounded-md border">
           <img
