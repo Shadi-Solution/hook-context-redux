@@ -5,6 +5,7 @@ import { Plus, Minus } from "lucide-react";
 import { Cart, ProductList } from "./components";
 import "./App.css";
 import CartContextProvider from "./contexts/Cart/CartContextProvider";
+import ProductContextProvider from "./contexts/Product/ProductContextProvider";
 
 function App() {
   console.log("I am boss.");
@@ -36,7 +37,9 @@ function App() {
       <h2 className="font-bold text-3xl pt-3">All Products</h2>
       <div className="flex">
         <CartContextProvider>
-          <ProductList />
+          <ProductContextProvider>
+            <ProductList />
+          </ProductContextProvider>
           <Cart />
         </CartContextProvider>
       </div>

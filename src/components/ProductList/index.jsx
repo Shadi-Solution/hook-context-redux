@@ -1,13 +1,14 @@
-import PRODUCTS from "./data";
 import { useCart } from "../../contexts/Cart/CartContext";
+import { useProduct } from "../../contexts/Product/ProductContext";
 
 const ProductList = () => {
   console.log("Im ProductList component");
   const { addItemToCart } = useCart();
+  const { products } = useProduct();
 
   return (
     <div className="mx-auto grid w-full max-w-7xl items-center space-y-4 px-2 py-5 md:grid-cols-2 md:gap-6 md:space-y-0 lg:grid-cols-4">
-      {PRODUCTS.map(({ key, name, price, description, imgUrl }) => (
+      {products.map(({ key, name, price, description, imgUrl }) => (
         <div key={key} className="rounded-md border">
           <img
             src={imgUrl}
