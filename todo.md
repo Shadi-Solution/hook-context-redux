@@ -14,7 +14,8 @@
 
 - Context api
 - Redux toolkit 
+  - https://redux-toolkit.js.org/tutorials/quick-start
   - Todo provide video link
-- Solve one dsa problem
-- Implement our own array
+- Solve one dsa problem -> future
+- Implement our own array -> future
 - Crete our own function to flat any array.

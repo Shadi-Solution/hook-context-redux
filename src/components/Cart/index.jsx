@@ -1,10 +1,12 @@
-import PropTypes from "prop-types";
-
 import { Trash, Heart } from "lucide-react";
-import { memo } from "react";
 
-function Cart({ cartItems = [] }) {
+import { useSelector } from "react-redux";
+import { cartSelector } from "../../slices/CartSlice";
+
+function Cart() {
   console.log("Im cart component");
+  const { cartItems } = useSelector(cartSelector);
+
   return (
     <div className="mx-auto flex max-w-3xl flex-col space-y-4 p-6 px-2 sm:p-10 sm:px-2">
       <h2 className="text-3xl font-bold">Your cart</h2>
@@ -57,10 +59,4 @@ function Cart({ cartItems = [] }) {
   );
 }
 
-Cart.propTypes = {
-  cartItems: PropTypes.array.isRequired,
-};
-
-const MemoisedCart = memo(Cart);
-
-export default MemoisedCart;
+export default Cart;
