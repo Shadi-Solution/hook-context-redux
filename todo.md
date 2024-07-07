@@ -13,9 +13,10 @@
 # 07-July-KT
 
 - Context api
+  - [video link](https://www.youtube.com/watch?v=JQVBGtZMqgU&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige&index=13&t=9s&pp=iAQB)
 - Redux toolkit 
   - https://redux-toolkit.js.org/tutorials/quick-start
-  - Todo provide video link
+  - [video link](https://www.youtube.com/watch?v=1i04-A7kfFI&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige&index=15&pp=iAQB)
 - Solve one dsa problem -> future
 - Implement our own array -> future
-- Crete our own function to flat any array.
+- Crete our own function to flat any array. -> **HW**
