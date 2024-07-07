@@ -1,10 +1,10 @@
-import { memo } from "react";
-import PropTypes from "prop-types";
-
 import PRODUCTS from "./data";
+import { useCart } from "../../contexts/Cart/CartContext";
 
-const ProductList = ({ addToCart }) => {
+const ProductList = () => {
   console.log("Im ProductList component");
+  const { addItemToCart } = useCart();
+
   return (
     <div className="mx-auto grid w-full max-w-7xl items-center space-y-4 px-2 py-5 md:grid-cols-2 md:gap-6 md:space-y-0 lg:grid-cols-4">
       {PRODUCTS.map(({ key, name, price, description, imgUrl }) => (
@@ -58,7 +58,7 @@ const ProductList = ({ addToCart }) => {
               type="button"
               className="mt-4 w-full rounded-sm bg-black px-2 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
               onClick={() =>
-                addToCart({ key, name, price, description, imgUrl })
+                addItemToCart({ key, name, price, description, imgUrl })
               }
             >
               Add to Cart
@@ -70,10 +70,4 @@ const ProductList = ({ addToCart }) => {
   );
 };
 
-ProductList.propTypes = {
-  addToCart: PropTypes.func.isRequired,
-};
-
-const MemoisedProductList = memo(ProductList);
-
-export default MemoisedProductList;
+export default ProductList;

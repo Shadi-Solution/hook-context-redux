@@ -1,20 +1,14 @@
-import { useCallback, useState } from "react";
+import { useState } from "react";
 
 import { Plus, Minus } from "lucide-react";
 
 import { Cart, ProductList } from "./components";
 import "./App.css";
+import CartContextProvider from "./contexts/Cart/CartContextProvider";
 
 function App() {
-  const [cartItems, setCartItems] = useState([]);
+  console.log("I am boss.");
   const [count, setCount] = useState(0);
-
-  const addToCart = useCallback(
-    (productInfo) => {
-      setCartItems([...cartItems, productInfo]);
-    },
-    [cartItems]
-  );
 
   return (
     <>
@@ -41,8 +35,10 @@ function App() {
       </div>
       <h2 className="font-bold text-3xl pt-3">All Products</h2>
       <div className="flex">
-        <ProductList addToCart={addToCart} />
-        <Cart cartItems={cartItems} />
+        <CartContextProvider>
+          <ProductList />
+          <Cart />
+        </CartContextProvider>
       </div>
     </>
   );
